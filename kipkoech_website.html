@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kipkoech Ngetich | IT Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e2c;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111138;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2c2c6c;
+    }
+
+    .name {
+      font-family: 'Fira Code', monospace;
+      font-size: 2rem;
+      color: #00ff99;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff99;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #00ff99;
+      margin-top: 0.5rem;
+    }
+
+    .bio {
+      margin: 1rem 0;
+    }
+
+    .cta {
+      margin-top: 1.5rem;
+    }
+
+    .cta a {
+      background: #00ff99;
+      color: #0e0e2c;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #00cc7a;
+    }
+
+    .hero-image img {
+      width: 250px;
+      border-radius: 50%;
+      border: 4px solid #00ff99;
+    }
+
+    section {
+      padding: 4rem;
+    }
+
+    h2 {
+      color: #00ff99;
+      font-family: 'Fira Code', monospace;
+      margin-bottom: 1rem;
+    }
+
+    .skills-grid, .projects, .education, .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1a1a3f;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 153, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111138;
+      border-top: 1px solid #2c2c6c;
+    }
+
+    .terminal-form input, .terminal-form textarea, .terminal-form button {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      font-family: 'Fira Code', monospace;
+      background: #0e0e2c;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="name">Kipkoech Ngetich</div>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Kipkoech Ngetich</h1>
+      <div class="tagline">IT Specialist | Web Developer | Technical Mentor</div>
+      <p class="bio">I solve technical problems, build websites, and empower others through IT training.</p>
+      <div class="cta">
+        <a href="#">Download Resume (PDF)</a>
+        <a href="#projects">View My Projects</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/mnt/data/PASSPO.png" alt="Kipkoech Ngetich">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="card">LAN/WAN, TCP/IP, DHCP</div>
+      <div class="card">HTML/CSS, JavaScript, PHP, WordPress</div>
+      <div class="card">Git, MySQL, AWS (Basic), Trello</div>
+      <div class="card">Mentoring, Technical Support</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Freelance IT Professional (2023–Present)</h3>
+        <ul>
+          <li>Built websites for small businesses</li>
+          <li>Provided remote IT support</li>
+          <li>Set up secure IT infrastructure</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>ICT Attachee – Mathari KMTC (2021)</h3>
+        <ul>
+          <li>Troubleshooting and network support</li>
+          <li>Infrastructure management and repairs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Canaan Hospital Website</h3>
+        <p>PHP, MySQL, Responsive Design</p>
+      </div>
+      <div class="card">
+        <h3>Freelance Web Dev Work</h3>
+        <p>Client websites built using HTML, CSS, and WordPress</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>KCA University</h3>
+        <p>Bachelor of Science in IT – 2022</p>
+      </div>
+      <div class="card">
+        <h3>Ditemon Computer College</h3>
+        <p>Certificate in Computer Basics – 2016</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="card">
+        <p>Email: kipkoechngetich20@gmail.com</p>
+        <p>Phone: +254 714 502501</p>
+        <p>LinkedIn | GitHub</p>
+      </div>
+      <div class="card">
+        <form class="terminal-form">
+          <label>Your Name</label>
+          <input type="text" name="name">
+          <label>Your Email</label>
+          <input type="email" name="email">
+          <label>Message</label>
+          <textarea rows="4"></textarea>
+          <button type="submit">> Send_Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kipkoech Ngetich | All rights reserved</p>
+  </footer>
+</body>
+
+</html>
