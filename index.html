@@ -1,256 +1,2661 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kipkoech Ngetich | IT Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0e0e2c;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: #111138;
-      padding: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #2c2c6c;
-    }
+    <title>Kipkoech Ngetich | Digital & Business Solutions Consultant</title>
 
-    .name {
-      font-family: 'Fira Code', monospace;
-      font-size: 2rem;
-      color: #00ff99;
-    }
+    <meta name="description"
+        content="Kipkoech Ngetich provides website development, IT support, Windows and Microsoft Office setup, Excel solutions, tender support, business documentation and digital business services in Kenya.">
 
-    nav a {
-      margin-left: 2rem;
-      color: #e0e0e0;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+    <meta name="keywords"
+        content="Kipkoech Ngetich, Ngetich, IT consultant Kenya, website developer Kenya, web developer Nairobi, Excel services Kenya, tender preparation Kenya, IT support Nairobi, Windows installation, Microsoft Office installation, business support Kenya">
 
-    nav a:hover {
-      color: #00ff99;
-    }
+    <meta name="author" content="Kipkoech Ngetich">
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem;
-    }
+    <meta name="robots" content="index, follow">
 
-    .hero-text {
-      max-width: 50%;
-    }
+    <link rel="canonical" href="https://www.ngetich.com/">
 
-    .hero-text h1 {
-      font-size: 3rem;
-      font-family: 'Fira Code', monospace;
-    }
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="Kipkoech Ngetich | Digital & Business Solutions Consultant">
 
-    .tagline {
-      font-size: 1.2rem;
-      color: #00ff99;
-      margin-top: 0.5rem;
-    }
+    <meta property="og:description"
+        content="Websites, IT support, Excel solutions, tender support and digital business services.">
 
-    .bio {
-      margin: 1rem 0;
-    }
+    <meta property="og:type" content="website">
 
-    .cta {
-      margin-top: 1.5rem;
-    }
+    <meta property="og:url" content="https://www.ngetich.com/">
 
-    .cta a {
-      background: #00ff99;
-      color: #0e0e2c;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      margin-right: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
+    <meta property="og:image"
+        content="https://www.ngetich.com/images/PASSPORT.jpeg">
 
-    .cta a:hover {
-      background: #00cc7a;
-    }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .hero-image img {
-      width: 250px;
-      border-radius: 50%;
-      border: 4px solid #00ff99;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-    section {
-      padding: 4rem;
-    }
+    <style>
 
-    h2 {
-      color: #00ff99;
-      font-family: 'Fira Code', monospace;
-      margin-bottom: 1rem;
-    }
+        :root {
+            --bg: #070b14;
+            --bg2: #0b1120;
+            --card: #101827;
+            --card2: #131e30;
+            --primary: #00e6a7;
+            --primary-dark: #00b986;
+            --text: #f5f7fa;
+            --muted: #9ca9ba;
+            --border: rgba(255,255,255,.08);
+            --danger: #ff6464;
+            --max: 1180px;
+        }
 
-    .skills-grid, .projects, .education, .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .card {
-      background: #1a1a3f;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 255, 153, 0.1);
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #111138;
-      border-top: 1px solid #2c2c6c;
-    }
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-    .terminal-form input, .terminal-form textarea, .terminal-form button {
-      width: 100%;
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      font-family: 'Fira Code', monospace;
-      background: #0e0e2c;
-      color: #00ff99;
-      border: 1px solid #00ff99;
-      border-radius: 4px;
-    }
-  </style>
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(var(--max), 92%);
+            margin: auto;
+        }
+
+        .green {
+            color: var(--primary);
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7,11,20,.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Fira Code", monospace;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: .88rem;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            background: var(--primary);
+            color: #04100c !important;
+            padding: 10px 17px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(0,230,167,.07);
+            filter: blur(110px);
+            right: -150px;
+            top: 50px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            font-family: "Fira Code", monospace;
+            color: var(--primary);
+            font-size: .82rem;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 1.03;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            color: var(--muted);
+            font-size: 1.08rem;
+            max-width: 670px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 21px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: .3s;
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #04100c;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .profile-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile {
+            width: 310px;
+            height: 310px;
+            padding: 8px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--primary), transparent 65%);
+            box-shadow: 0 30px 80px rgba(0,0,0,.4);
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 23px;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 25px 10px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: .8rem;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-head {
+            max-width: 730px;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-family: "Fira Code", monospace;
+            font-size: .78rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(2rem,4vw,3.2rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0,230,167,.3);
+            background: var(--card2);
+        }
+
+        .service-number {
+            font-family: "Fira Code", monospace;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        .service-card ul {
+            margin: 15px 0 0 18px;
+            color: var(--muted);
+            font-size: .83rem;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .about-points {
+            display: grid;
+            gap: 12px;
+        }
+
+        .about-point {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .about-point span {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* =========================
+           TENDER
+        ========================= */
+
+        .tender-box {
+            background:
+                linear-gradient(135deg,rgba(0,230,167,.1),rgba(0,230,167,.02)),
+                var(--card);
+            border: 1px solid rgba(0,230,167,.18);
+            border-radius: 18px;
+            padding: 45px;
+        }
+
+        .tender-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .tender-box p {
+            color: var(--muted);
+        }
+
+        .tender-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0 25px;
+        }
+
+        .tender-list div {
+            color: #cbd5e1;
+            font-size: .87rem;
+        }
+
+        .tender-list div::before {
+            content: "✓";
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* =========================
+           IT SUPPORT
+        ========================= */
+
+        .it-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+        }
+
+        .it-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 23px;
+            border-radius: 10px;
+        }
+
+        .it-card strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .it-card p {
+            color: var(--muted);
+            font-size: .82rem;
+        }
+
+        /* =========================
+           PRICING
+        ========================= */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .price-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .price-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 15px 50px rgba(0,230,167,.08);
+        }
+
+        .price-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 17px;
+        }
+
+        .price small {
+            color: var(--muted);
+            font-size: .7rem;
+            font-weight: 400;
+        }
+
+        .price-card ul {
+            list-style: none;
+            color: var(--muted);
+            margin-bottom: 25px;
+            font-size: .86rem;
+        }
+
+        .price-card li {
+            margin: 8px 0;
+        }
+
+        .price-card li::before {
+            content: "✓";
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            transition: .3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0,230,167,.3);
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-family: "Fira Code", monospace;
+            font-size: .72rem;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 18px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,.05);
+            color: #cbd5e1;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: .7rem;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .process {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .process-number {
+            color: var(--primary);
+            font-family: "Fira Code", monospace;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .process p {
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        /* =========================
+           RETAINERS
+        ========================= */
+
+        .retainer {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            padding: 45px;
+            border-radius: 18px;
+        }
+
+        .retainer-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .retainer-card {
+            background: var(--card);
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .retainer-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .retainer-card p {
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .testimonial p {
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial small {
+            color: var(--primary);
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            max-width: 850px;
+        }
+
+        details {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            margin-bottom: 10px;
+            padding: 18px 20px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        details p {
+            color: var(--muted);
+            margin-top: 12px;
+            font-size: .88rem;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .contact-card p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: .82rem;
+            margin-bottom: 6px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            background: var(--bg);
+            color: white;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 13px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--primary);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit {
+            width: 100%;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-section {
+            text-align: center;
+            background:
+                radial-gradient(circle at center,rgba(0,230,167,.08),transparent 50%),
+                var(--bg2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cta-section p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 40px 0;
+            background: #04070d;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-grid p {
+            color: var(--muted);
+            font-size: .78rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            font-size: .78rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            z-index: 999;
+            box-shadow: 0 10px 35px rgba(0,0,0,.4);
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        #topBtn {
+            position: fixed;
+            right: 24px;
+            bottom: 92px;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            background: var(--card2);
+            border: 1px solid var(--border);
+            color: white;
+            cursor: pointer;
+            display: none;
+            z-index: 998;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:950px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 76px);
+                background: #080d18;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 35px;
+                transition: .3s;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .tender-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .profile-wrap {
+                order: -1;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .it-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .pricing-grid,
+            .retainer-grid,
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width:650px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .profile {
+                width: 240px;
+                height: 240px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .stat {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .services-grid,
+            .projects-grid,
+            .it-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tender-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tender-box,
+            .retainer {
+                padding: 25px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
 </head>
 
+
 <body>
-  <header>
-    <div class="name">Kipkoech Ngetich</div>
-    <nav>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Kipkoech Ngetich</h1>
-      <div class="tagline">IT Specialist | Web Developer | Technical Mentor</div>
-      <p class="bio">I solve technical problems, build websites, and empower others through IT training.</p>
-      <div class="cta">
-        <a href="#">Download Resume (PDF)</a>
-        <a href="#projects">View My Projects</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="images/PASSPORT.jpeg" alt="Kipkoech Ngetich">
-    </div>
-  </section>
 
-  <section id="skills">
-    <h2>Skills & Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="card">LAN/WAN, TCP/IP, DHCP</div>
-      <div class="card">HTML/CSS, JavaScript, PHP, WordPress</div>
-      <div class="card">Git, MySQL, AWS (Basic), Trello</div>
-      <div class="card">Mentoring, Technical Support</div>
-    </div>
-  </section>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <section id="experience">
-    <h2>Work Experience</h2>
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Freelance IT Professional (2023–Present)</h3>
-        <ul>
-          <li>Built websites for small businesses</li>
-          <li>Provided remote IT support</li>
-          <li>Set up secure IT infrastructure</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>ICT Attachee – Mathari KMTC (2021)</h3>
-        <ul>
-          <li>Troubleshooting and network support</li>
-          <li>Infrastructure management and repairs</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Canaan Hospital Website</h3>
-        <p>PHP, MySQL, Responsive Design</p>
-      </div>
-      <div class="card">
-        <h3>Freelance Web Dev Work</h3>
-        <p>Client websites built using HTML, CSS, and WordPress</p>
-      </div>
-    </div>
-  </section>
+    <div class="container nav">
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education">
-      <div class="card">
-        <h3>KCA University</h3>
-        <p>Bachelor of Science in IT – 2022</p>
-      </div>
-      <div class="card">
-        <h3>Ditemon Computer College</h3>
-        <p>Certificate in Computer Basics – 2016</p>
-      </div>
-    </div>
-  </section>
+        <a href="#" class="logo">
+            ngetich<span>.com</span>
+        </a>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <div class="card">
-        <p>Email: kipkoechngetich20@gmail.com</p>
-        <p>Phone: +254 714 502501</p>
-        <p>LinkedIn | GitHub</p>
-      </div>
-      <div class="card">
-        <form class="terminal-form">
-          <label>Your Name</label>
-          <input type="text" name="name">
-          <label>Your Email</label>
-          <input type="email" name="email">
-          <label>Message</label>
-          <textarea rows="4"></textarea>
-          <button type="submit">> Send_Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
 
-  <footer>
-    <p>&copy; 2025 Kipkoech Ngetich | All rights reserved</p>
-  </footer>
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#services">Services</a>
+            <a href="#tenders">Tenders</a>
+            <a href="#projects">Projects</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="nav-button">Get a Quote</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                DIGITAL & BUSINESS SOLUTIONS CONSULTANT
+            </div>
+
+            <h1>
+                Technology that
+                <span class="green">gets business done.</span>
+            </h1>
+
+            <p class="hero-description">
+
+                I'm <strong>Kipkoech Ngetich</strong> — an IT professional
+                helping individuals, entrepreneurs and SMEs with websites,
+                IT support, office solutions, tender preparation,
+                business documentation and digital services.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Start a Project
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-wrap">
+
+            <div class="profile">
+
+                <img src="images/PASSPORT.jpeg"
+                     alt="Kipkoech Ngetich">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>5+</strong>
+            <span>Current Clients</span>
+        </div>
+
+        <div class="stat">
+            <strong>20+</strong>
+            <span>Projects & Tasks</span>
+        </div>
+
+        <div class="stat">
+            <strong>3+</strong>
+            <span>Years Experience</span>
+        </div>
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>Client Focused</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // SERVICES
+            </div>
+
+            <h2>
+                Everything you need to operate digitally.
+            </h2>
+
+            <p>
+                From building your website to preparing a tender,
+                organizing your Excel files or solving a computer
+                problem, I provide practical digital and business support.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-number">01 / WEB</div>
+
+                <h3>Website Development</h3>
+
+                <p>
+                    Professional websites for businesses,
+                    organizations and individuals.
+                </p>
+
+                <ul>
+                    <li>Business websites</li>
+                    <li>Portfolio websites</li>
+                    <li>Landing pages</li>
+                    <li>E-commerce websites</li>
+                    <li>Domain & hosting</li>
+                    <li>SEO</li>
+                    <li>Website maintenance</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">02 / IT</div>
+
+                <h3>IT Support</h3>
+
+                <p>
+                    Practical computer and technology support
+                    for homes and businesses.
+                </p>
+
+                <ul>
+                    <li>Windows installation</li>
+                    <li>Microsoft Office setup</li>
+                    <li>Computer formatting</li>
+                    <li>Printer setup</li>
+                    <li>Network troubleshooting</li>
+                    <li>Software installation</li>
+                    <li>System optimization</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">03 / OFFICE</div>
+
+                <h3>Excel & Office Solutions</h3>
+
+                <p>
+                    Make your office work more organized and efficient.
+                </p>
+
+                <ul>
+                    <li>Excel spreadsheets</li>
+                    <li>Excel dashboards</li>
+                    <li>Data entry</li>
+                    <li>Data cleaning</li>
+                    <li>Word documents</li>
+                    <li>PowerPoint presentations</li>
+                    <li>Reports & templates</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">04 / TENDERS</div>
+
+                <h3>Tender & Proposal Support</h3>
+
+                <p>
+                    Professional preparation and organization
+                    of business tender documents.
+                </p>
+
+                <ul>
+                    <li>Tender document review</li>
+                    <li>Technical proposals</li>
+                    <li>Financial schedules</li>
+                    <li>Prequalification documents</li>
+                    <li>Company profiles</li>
+                    <li>Compliance checklists</li>
+                    <li>Bid preparation</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">05 / BUSINESS</div>
+
+                <h3>Business Documentation</h3>
+
+                <p>
+                    Professional documents that help businesses
+                    communicate and operate effectively.
+                </p>
+
+                <ul>
+                    <li>Company profiles</li>
+                    <li>Quotations</li>
+                    <li>Invoices</li>
+                    <li>Proposals</li>
+                    <li>Business reports</li>
+                    <li>Policies & procedures</li>
+                    <li>Capability statements</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">06 / ONLINE</div>
+
+                <h3>Online Services Assistance</h3>
+
+                <p>
+                    Assistance navigating digital government
+                    and business services.
+                </p>
+
+                <ul>
+                    <li>KRA online services</li>
+                    <li>KRA PIN assistance</li>
+                    <li>eCitizen assistance</li>
+                    <li>eTIMS guidance</li>
+                    <li>Online applications</li>
+                    <li>Digital document preparation</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">07 / AUTOMATION</div>
+
+                <h3>Business Automation</h3>
+
+                <p>
+                    Turn repetitive manual work into organized
+                    digital workflows.
+                </p>
+
+                <ul>
+                    <li>Google Sheets systems</li>
+                    <li>Google Forms</li>
+                    <li>Apps Script automation</li>
+                    <li>Automated reports</li>
+                    <li>Reminders</li>
+                    <li>Digital record systems</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">08 / SUPPORT</div>
+
+                <h3>Virtual Business Support</h3>
+
+                <p>
+                    Outsource recurring digital and administrative
+                    tasks instead of hiring full-time staff.
+                </p>
+
+                <ul>
+                    <li>Data entry</li>
+                    <li>Online research</li>
+                    <li>Document preparation</li>
+                    <li>Digital filing</li>
+                    <li>Website updates</li>
+                    <li>Monthly support</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">09 / DIGITAL</div>
+
+                <h3>Digital Business Setup</h3>
+
+                <p>
+                    Establish the basic digital infrastructure
+                    your business needs to operate professionally.
+                </p>
+
+                <ul>
+                    <li>Business email</li>
+                    <li>Domain setup</li>
+                    <li>Google Business Profile guidance</li>
+                    <li>Social media integration</li>
+                    <li>Digital filing</li>
+                    <li>Online presence setup</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+    <div class="container about-grid">
+
+        <div class="about">
+
+            <div class="section-label">
+                // ABOUT KIPKOECH
+            </div>
+
+            <h2>
+                One professional for your everyday digital needs.
+            </h2>
+
+            <p>
+                I am Kipkoech Ngetich, an IT professional and
+                digital business solutions consultant based in Kenya.
+            </p>
+
+            <p>
+                My work combines technology, office productivity,
+                website development and business administration.
+                I work with individuals, entrepreneurs and organizations
+                that need reliable practical support.
+            </p>
+
+            <p>
+                My goal is simple: understand the problem,
+                find the right solution and deliver it professionally.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+                Work With Me
+            </a>
+
+        </div>
+
+
+        <div class="about-points">
+
+            <div class="about-point">
+                <span>✓</span>
+                Professional communication
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                Practical technology solutions
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                Transparent project scope
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                Remote and on-site support
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                Ongoing client support
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TENDER SUPPORT
+===================================================== -->
+
+<section id="tenders">
+
+    <div class="container">
+
+        <div class="tender-box">
+
+            <div class="tender-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        // TENDER & PROCUREMENT SUPPORT
+                    </div>
+
+                    <h2>
+                        Preparing a tender?
+                    </h2>
+
+                    <p>
+                        I assist businesses with organizing and
+                        preparing professional tender submissions,
+                        proposals and supporting documentation.
+                    </p>
+
+                    <br>
+
+                    <a href="#contact"
+                       class="btn btn-primary">
+                        Request Tender Assistance
+                    </a>
+
+                </div>
+
+
+                <div class="tender-list">
+
+                    <div>Tender document review</div>
+
+                    <div>Eligibility checklist</div>
+
+                    <div>Technical proposals</div>
+
+                    <div>Financial schedules</div>
+
+                    <div>Company profiles</div>
+
+                    <div>Staff CV formatting</div>
+
+                    <div>Method statements</div>
+
+                    <div>Work plans</div>
+
+                    <div>Experience schedules</div>
+
+                    <div>Compliance documents</div>
+
+                    <div>Prequalification support</div>
+
+                    <div>Bid preparation</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     IT SUPPORT
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // COMPUTER & IT SERVICES
+            </div>
+
+            <h2>
+                Need help with your computer?
+            </h2>
+
+            <p>
+                Computer setup, troubleshooting and software
+                configuration for individuals and businesses.
+            </p>
+
+        </div>
+
+
+        <div class="it-grid">
+
+            <div class="it-card">
+                <strong>Windows Setup</strong>
+                <p>
+                    Windows installation, configuration and updates.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Microsoft Office</strong>
+                <p>
+                    Office installation and configuration using
+                    properly licensed software.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Computer Formatting</strong>
+                <p>
+                    System reset, clean installation and configuration.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Printer Setup</strong>
+                <p>
+                    Printer installation, drivers and troubleshooting.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Network Support</strong>
+                <p>
+                    Basic LAN, Wi-Fi and connectivity troubleshooting.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Software Setup</strong>
+                <p>
+                    Installation and configuration of business software.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>System Optimization</strong>
+                <p>
+                    Improve startup, storage and general performance.
+                </p>
+            </div>
+
+            <div class="it-card">
+                <strong>Remote Support</strong>
+                <p>
+                    Remote troubleshooting where appropriate.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRICING
+===================================================== -->
+
+<section id="pricing">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // STARTING PACKAGES
+            </div>
+
+            <h2>
+                Simple pricing to get started.
+            </h2>
+
+            <p>
+                Prices below are starting points. Final quotations
+                depend on the scope and complexity of the work.
+            </p>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+
+            <div class="price-card">
+
+                <h3>Starter Website</h3>
+
+                <div class="price">
+                    KES 15,000+
+                </div>
+
+                <ul>
+                    <li>Up to 5 pages</li>
+                    <li>Mobile responsive</li>
+                    <li>WhatsApp integration</li>
+                    <li>Contact form</li>
+                    <li>Basic SEO</li>
+                    <li>Domain/hosting guidance</li>
+                </ul>
+
+                <a href="#contact"
+                   class="btn btn-outline">
+                    Get Quote
+                </a>
+
+            </div>
+
+
+            <div class="price-card featured">
+
+                <h3>Business Website</h3>
+
+                <div class="price">
+                    KES 30,000+
+                </div>
+
+                <ul>
+                    <li>Professional design</li>
+                    <li>Up to 10 pages</li>
+                    <li>Mobile optimization</li>
+                    <li>SEO setup</li>
+                    <li>WhatsApp integration</li>
+                    <li>Business forms</li>
+                    <li>Analytics setup</li>
+                </ul>
+
+                <a href="#contact"
+                   class="btn btn-primary">
+                    Get Quote
+                </a>
+
+            </div>
+
+
+            <div class="price-card">
+
+                <h3>IT & Office Support</h3>
+
+                <div class="price">
+                    From KES 1,000
+                </div>
+
+                <ul>
+                    <li>Windows setup</li>
+                    <li>Office setup</li>
+                    <li>Computer troubleshooting</li>
+                    <li>Excel work</li>
+                    <li>Document formatting</li>
+                    <li>Printer support</li>
+                </ul>
+
+                <a href="#contact"
+                   class="btn btn-outline">
+                    Get Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // SELECTED PROJECTS
+            </div>
+
+            <h2>
+                Work and systems I've built.
+            </h2>
+
+            <p>
+                Selected digital, technical and business-support
+                projects.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    DIGITAL PLATFORM
+                </div>
+
+                <h3>HAZMIS Client Portal</h3>
+
+                <p>
+                    Digital client management and inspection system
+                    concept with inspection history, equipment tracking,
+                    compliance information, reports and automated reminders.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Google Sheets</span>
+                    <span class="tag">Apps Script</span>
+                    <span class="tag">Automation</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    WEBSITE DEVELOPMENT
+                </div>
+
+                <h3>Business & Professional Websites</h3>
+
+                <p>
+                    Responsive websites for professionals and businesses
+                    with service pages, contact forms, WhatsApp integration,
+                    mobile optimization and SEO foundations.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">SEO</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    BUSINESS AUTOMATION
+                </div>
+
+                <h3>Inspection Reporting Automation</h3>
+
+                <p>
+                    Digital workflow for organizing service information,
+                    generating reports, sending reminders and maintaining
+                    inspection records.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Google Sheets</span>
+                    <span class="tag">Apps Script</span>
+                    <span class="tag">PDF</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    OFFICE SOLUTIONS
+                </div>
+
+                <h3>Excel Reporting Systems</h3>
+
+                <p>
+                    Structured spreadsheets, reporting templates,
+                    calculations and business data organization.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Excel</span>
+                    <span class="tag">Dashboards</span>
+                    <span class="tag">Reports</span>
+                    <span class="tag">Data</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    BUSINESS DOCUMENTATION
+                </div>
+
+                <h3>Proposals & Company Documentation</h3>
+
+                <p>
+                    Professional proposals, quotations, company profiles,
+                    technical documents, reports and tender documentation.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Word</span>
+                    <span class="tag">PDF</span>
+                    <span class="tag">Proposals</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-category">
+                    IT SUPPORT
+                </div>
+
+                <h3>Computer & Software Support</h3>
+
+                <p>
+                    Windows configuration, software installation,
+                    troubleshooting, printer setup and general IT support.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Windows</span>
+                    <span class="tag">Microsoft Office</span>
+                    <span class="tag">Networking</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // MY PROCESS
+            </div>
+
+            <h2>
+                From idea to completed solution.
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process">
+                <div class="process-number">01</div>
+                <h3>Discuss</h3>
+                <p>
+                    Understand your problem and desired outcome.
+                </p>
+            </div>
+
+            <div class="process">
+                <div class="process-number">02</div>
+                <h3>Plan</h3>
+                <p>
+                    Define scope, requirements and quotation.
+                </p>
+            </div>
+
+            <div class="process">
+                <div class="process-number">03</div>
+                <h3>Deliver</h3>
+                <p>
+                    Build, prepare or complete the agreed work.
+                </p>
+            </div>
+
+            <div class="process">
+                <div class="process-number">04</div>
+                <h3>Support</h3>
+                <p>
+                    Provide assistance and improvements after delivery.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RETAINER
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="retainer">
+
+            <div class="section-label">
+                // OUTSOURCED BUSINESS SUPPORT
+            </div>
+
+            <h2>
+                Need someone to handle your digital office work?
+            </h2>
+
+            <p style="color:var(--muted);max-width:700px;">
+                Instead of employing someone full-time for occasional
+                digital and administrative tasks, outsource the work
+                when you need it.
+            </p>
+
+
+            <div class="retainer-grid">
+
+
+                <div class="retainer-card">
+
+                    <h3>Basic Support</h3>
+
+                    <p>
+                        Occasional documents, Excel work,
+                        online tasks and technical assistance.
+                    </p>
+
+                </div>
+
+
+                <div class="retainer-card">
+
+                    <h3>Professional Support</h3>
+
+                    <p>
+                        Recurring office, website, documentation
+                        and digital support every month.
+                    </p>
+
+                </div>
+
+
+                <div class="retainer-card">
+
+                    <h3>Business Support</h3>
+
+                    <p>
+                        Dedicated ongoing digital and administrative
+                        support for growing organizations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <a href="#contact"
+               class="btn btn-primary">
+                Discuss Monthly Support
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // CLIENT FEEDBACK
+            </div>
+
+            <h2>
+                What clients say.
+            </h2>
+
+            <p>
+                Replace these placeholders with genuine client
+                testimonials once you have permission to publish them.
+            </p>
+
+        </div>
+
+
+        <div class="testimonials">
+
+
+            <div class="testimonial">
+
+                <p>
+                    "Kipkoech was professional, responsive and
+                    understood exactly what we needed."
+                </p>
+
+                <strong>Client Testimonial</strong>
+
+                <small>Business Client</small>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <p>
+                    "The work was completed professionally and
+                    communication throughout the project was excellent."
+                </p>
+
+                <strong>Client Testimonial</strong>
+
+                <small>Business Client</small>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <p>
+                    "A practical approach to solving our digital
+                    and administrative requirements."
+                </p>
+
+                <strong>Client Testimonial</strong>
+
+                <small>Business Client</small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // FAQ
+            </div>
+
+            <h2>
+                Frequently asked questions.
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+            <details>
+
+                <summary>
+                    Do you work with small businesses?
+                </summary>
+
+                <p>
+                    Yes. I work with individuals, startups, SMEs,
+                    professionals and organizations.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can you build a website from scratch?
+                </summary>
+
+                <p>
+                    Yes. Websites can be developed from scratch based
+                    on your business requirements and desired functionality.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can you help with tenders?
+                </summary>
+
+                <p>
+                    Yes. I provide tender document organization,
+                    technical proposal preparation, company documentation
+                    and related bid-support services. Final submission
+                    remains the client's responsibility.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Do you install Windows and Microsoft Office?
+                </summary>
+
+                <p>
+                    Yes. I provide installation and configuration support
+                    using legitimate software and appropriate licensing.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I hire you monthly?
+                </summary>
+
+                <p>
+                    Yes. Monthly digital and administrative support
+                    arrangements are available depending on workload.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Do you work remotely?
+                </summary>
+
+                <p>
+                    Yes. Many services can be completed remotely.
+                    On-site support can be arranged where practical.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can you help me with KRA or eCitizen?
+                </summary>
+
+                <p>
+                    I can provide assistance and guidance with online
+                    services and document preparation. Government
+                    approvals and decisions remain with the relevant
+                    government agency.
+                </p>
+
+            </details>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            // READY TO START?
+        </div>
+
+        <h2>
+            Have a task that needs to get done?
+        </h2>
+
+        <p>
+            Tell me what you need. I'll review the requirement and
+            recommend the most practical way forward.
+        </p>
+
+        <a href="#contact"
+           class="btn btn-primary">
+            Request a Quote
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                // CONTACT
+            </div>
+
+            <h2>
+                Let's discuss your project.
+            </h2>
+
+            <p>
+                Send your requirements and I'll get back to you.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Kipkoech Ngetich
+                </h3>
+
+                <br>
+
+                <p>
+                    Digital & Business Solutions Consultant
+                </p>
+
+                <p>
+                    <strong>Email</strong><br>
+
+                    <a href="mailto:kipkoechngetich20@gmail.com">
+                        kipkoechngetich20@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Phone</strong><br>
+
+                    <a href="tel:+254714502501">
+                        +254 714 502501
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Location</strong><br>
+                    Kenya — Remote & On-site Support
+                </p>
+
+                <br>
+
+                <a
+                    href="https://wa.me/254714502501?text=Hello%20Kipkoech,%20I%20found%20you%20through%20Ngetich.com%20and%20would%20like%20to%20discuss%20a%20project."
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    WhatsApp Me
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <!--
+                    FORM SUBMIT
+                    Replace with your preferred form backend later.
+                -->
+
+                <form
+                    action="https://formsubmit.co/kipkoechngetich20@gmail.com"
+                    method="POST">
+
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Ngetich.com Project Enquiry">
+
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false">
+
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table">
+
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://www.ngetich.com/thank-you.html">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone / WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="+254..."
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            What do you need?
+                        </label>
+
+                        <select
+                            name="service"
+                            required>
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option>
+                                Website Development
+                            </option>
+
+                            <option>
+                                IT Support
+                            </option>
+
+                            <option>
+                                Windows Installation
+                            </option>
+
+                            <option>
+                                Microsoft Office Setup
+                            </option>
+
+                            <option>
+                                Excel / Office Work
+                            </option>
+
+                            <option>
+                                Tender Preparation
+                            </option>
+
+                            <option>
+                                Business Documentation
+                            </option>
+
+                            <option>
+                                KRA / eCitizen Assistance
+                            </option>
+
+                            <option>
+                                Business Automation
+                            </option>
+
+                            <option>
+                                Monthly Business Support
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Your Requirements
+                        </label>
+
+                        <textarea
+                            name="message"
+                            rows="6"
+                            placeholder="Tell me what you need..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary submit">
+
+                        Send Project Enquiry →
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <p>
+            © <span id="year"></span>
+            Kipkoech Ngetich. All rights reserved.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#services">Services</a>
+
+            <a href="#tenders">Tenders</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/254714502501?text=Hello%20Kipkoech,%20I%20found%20you%20through%20Ngetich.com%20and%20would%20like%20to%20request%20a%20service."
+    target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp Kipkoech">
+
+    ☎
+
+</a>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn">
+    ↑
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+
+    });
+
+
+    /* Close mobile menu */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+            document.body.classList.remove("menu-open");
+
+        });
+
+    });
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 500) {
+
+            topBtn.style.display = "block";
+
+        } else {
+
+            topBtn.style.display = "none";
+
+        }
+
+    });
+
+
+    topBtn.addEventListener("click", function() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+</script>
+
+
 </body>
-
 </html>
+```
