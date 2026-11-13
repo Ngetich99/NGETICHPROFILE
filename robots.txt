@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+# LLM-friendly summary
+# See: https://www.ngetich.com/llms.txt
+
+Sitemap: https://www.ngetich.com/sitemap.xml

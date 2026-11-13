@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main single-page site -->
+  <url>
+    <loc>https://www.ngetich.com/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://www.ngetich.com/images/PASSPORT.jpeg</image:loc>
+      <image:title>Kipkoech Ngetich — Digital &amp; Business Solutions Consultant</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ngetich.com/images/gallery-1.jpg</image:loc>
+      <image:title>Business website build</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ngetich.com/images/gallery-3.jpg</image:loc>
+      <image:title>Excel reporting dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ngetich.com/images/gallery-4.jpg</image:loc>
+      <image:title>Tender document preparation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ngetich.com/images/gallery-8.jpg</image:loc>
+      <image:title>Google Sheets automation</image:title>
+    </image:image>
+  </url>
+
+  <!-- CV / Resume PDF -->
+  <url>
+    <loc>https://www.ngetich.com/resume/Kipkoech-Ngetich-CV.pdf</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
